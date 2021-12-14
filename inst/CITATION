@@ -1,0 +1,17 @@
+citEntry(entry="article",
+         title = "RCircos: an R package for Circos 2D track plots",
+         author = personList( as.person("Hongen Zhang"), 
+			      as.person("Paul Meltzer"),
+                              as.person("Sean Davis")),
+         year = 2013,
+         journal = "BMC Bioinformatics",
+         volume = "14",
+         pages = "244",
+         doi = "10.1186/1471-2105-14-244",
+         url = "http://www.biomedcentral.com/1471-2105/14/244",
+         
+         textVersion = 
+         paste("Hongen Zhang, Paul Meltzer and Sean Davis (2013):", 
+               "RCircos: an R package for Circos 2D track plots.",
+                "BMC Bioinformatics 14:244" ) )
+
