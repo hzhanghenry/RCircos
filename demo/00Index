@@ -1,0 +1,15 @@
+RCircos.Demo.Human  RCircos plot with human genomic data
+RCircos.Demo.Mouse.And.Rat  RCircos plot with both mouse and rat gene expression data
+RCircos.Gene.Connector.Demo RCircos plot of connectors and gene names
+RCircos.Heatmap.Demo    RCircos heatmap plot with gene expression data
+RCircos.Histogram.Demo  RCircos histogram plot with CNV data
+RCircos.Layout.Demo RCircos plot showing data track layout
+RCircos.Line.Plot.Demo  RCircos line plot with CNV data
+RCircos.Link.Plot.Demo  RCircos link plot 
+RCircos.Polygon.Plot.Demo  RCircos polygon plot 
+RCircos.Ribbon.Plot.Demo    RCircos Ribbon plot
+RCircos.Scatter.Plot.Demo   RCircos scatter plot with CNV data
+RCircos.Chromosome.Tick.Demo	RCircos chromosome tick plot
+RCircos.Tile.Plot.Demo  RCircos tile plot
+RCircos.Area.Plot.Demo	RCircos area plot
+RCircos.Zoom.Plot.Demo  RCircos zoomed heatmap, histogram, and points plot
