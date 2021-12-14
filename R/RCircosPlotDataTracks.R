@@ -820,18 +820,18 @@ RCircos.Tile.Plot <- function(tile.data=NULL, track.num=NULL,
 #               RCircos.Link.Plot(link.data, by.chromosome=FALSE, start.pos=0.6)
 #
 
-RCircos.Link.Plot <- function(link.data=NULL, track.num=NULL, 
-                by.chromosome=FALSE, start.pos=NULL, 
-                genomic.columns=3, is.sorted=TRUE, lineWidth=1)
+RCircos.Link.Plot <- function(link.data=NULL, track.num=NULL, by.chromosome=FALSE, 
+                start.pos=NULL, genomic.columns=3, is.sorted=TRUE, 
+                lineWidth=rep(1, nrow(link.data)))
 {
     if(is.null(link.data)) stop("Link data missing in RCircos.Link.Plot().\n");
     if(by.chromosome!=TRUE && by.chromosome!=FALSE)
         stop("Error: by.chromosome must be either TRUE or FALSE.\n");
 		
-    if(length(lineWidth) == 1 && lineWidth < 0) 
+    if(length(which(lineWidth < 0)) > 1 ) 
 		stop("Line width must be positive.");
 	if(length(lineWidth) > 1 && length(lineWidth) != nrow(link.data))
-		stop("Lenght of lineWidth must match rows or link.data");
+		stop("Length of lineWidth must match rows of link.data");
 
     RCircos.Par <- RCircos.Get.Plot.Parameters();
     
@@ -852,9 +852,7 @@ RCircos.Link.Plot <- function(link.data=NULL, track.num=NULL,
     #
     link.data <- RCircos.Get.Paired.Points.Positions(link.data, 
                     genomic.columns, plot.type="link");
-	if(length(lineWidth) > 1) 
-		lineWidth <- lineWidth[as.numeric(rownames(link.data))]			
-					
+
     #   Get link line colors for each pair of locations
     #   ================================================
     # 
